@@ -7,7 +7,7 @@ const path = require('path')
 const app = express()
 
 app.use(cors({
-  origin: 'http://localhost:5173',
+  origin: 'https://caption-generator-from-image.onrender.com',
   credentials: true
 }))
 
