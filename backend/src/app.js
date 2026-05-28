@@ -3,6 +3,7 @@ const cors = require('cors')
 const authrouter = require('./router/auth.routes')
 const cookieparser = require('cookie-parser') 
 const postrouter = require('./router/posts.routes')
+const path = require('path')
 const app = express()
 
 app.use(cors({
