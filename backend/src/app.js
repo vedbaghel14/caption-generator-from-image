@@ -14,9 +14,10 @@ app.use(cookieparser())
 app.use(express.json())
 app.use('/api/auth',authrouter)
 app.use('/api/posts',postrouter)
-app.use(express.static(path.join(__dirname,'../public')))
-app.get("*name",(req,res)=>{
-  res.sendFile(path.join(__dirname,'../public/index.html'))
+app.use(express.static(path.join(__dirname, '..', 'public')))
+
+app.use((req, res) => {
+    res.sendFile(path.join(__dirname, '..', 'public', 'index.html'))
 })
 
 
